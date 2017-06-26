@@ -6,6 +6,8 @@ var hbs=require('hbs');
 var f=require('./f.js');
 var s=require('./s.js');
 
+
+const port=process.env.PORT || 3000;
 var app =express();
 app.set('view engine','hbs');
 hbs.registerPartials(__dirname+'/views/partials');
@@ -118,4 +120,4 @@ f.google('delhi',(error,response)=>{
 
 
 
-app.listen(3000);
+app.listen(port);
