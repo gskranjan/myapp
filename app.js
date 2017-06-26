@@ -118,6 +118,170 @@ f.google('delhi',(error,response)=>{
          
          });
 
+f.google('bengaluru',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/bnglr',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Bengaluru',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
+f.google('kolkata',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/kolkata',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Kolkata',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
+f.google('ahmedabad',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/ahmedabad',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Ahmedabad',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
+
+
+f.google('chandigarh',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/chandigarh',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Chandigarh',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
+f.google('surat',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/surat',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Surat',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
+
+
 
 
 app.listen(port);
