@@ -54,6 +54,38 @@ f.google('hyderabad',(error,response)=>{
          
          });
 
+f.google('pune',(error,response)=>{
+    
+ if(response){
+     
+     s.tw(response.latitude,response.longtiude,(error,response)=>{
+          if(response){
+              
+              app.get('/pune',(req,res)=>{
+                  
+                  res.render('about',{
+                    place:'Pune',  
+                    temperature:response.temp,
+                    apparentTemperature:response.apparenttemp,
+                    humidity:response.humidity,
+                    expectedweather:response.expectedweather,
+                    weather:response.weather
+                      
+                  });
+                  
+                  
+              })
+              
+              
+           
+              
+          }
+          
+          });
+ }
+         
+         });
+
 
 f.google('mumbai',(error,response)=>{
     

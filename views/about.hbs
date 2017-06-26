@@ -14,7 +14,7 @@
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
-      background-color:#395693;
+      background-color:white;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
@@ -41,6 +41,7 @@
    table {
     border-collapse: collapse;
     width: 100%;
+         background-color:#395693;
 }
 
 th, td {
@@ -50,18 +51,26 @@ th, td {
     color:black;
 }
 
-tr:hover{background-color:#f5f5f5}
+tr:hover{background-color:grey}
       
       row{
           background-color: #474e5d;
       }
+      
+footer{
+     background-color:#474e5d;
+    color:white;
+}
+       a:link {
+    text-decoration: none;
+}
   </style>
 
 <body>
     
  {{>header}}
     
-    <center><h2 style="color:black">{{ place }}</h2></center>
+    <center><h1 style="color:#474e5d"><b>{{ place }}</b></h1></center>
     <br>
     
   <table>
@@ -84,13 +93,7 @@ tr:hover{background-color:#f5f5f5}
   
 </table>
     
-    <div class="row">
-    <div class="col-md-9"></div>
-        <div class="col-md-3">
-          <p >Created by-Ranjan copyright</p>
-            
-        </div>
-    </div>
+{{>footer}}
   
     
     
